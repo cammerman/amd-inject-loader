@@ -8,7 +8,7 @@ module.exports = function( input ) {
 	var stripComments = options.stripComments === true;
 
 	// Match AMD define and function
-	var rCapture = /define\([ ]?(\[[\s\S]*?\]),[ ]?function[ ]?\(([^)]+)?\)[ ]?{/;
+	var rCapture = /define\((?:\s*[\s\S]*,)?\s*(\[[\s\S]*?\]),\s*function[ ]?\(([^)]+)?\)[ ]?{/;
 	var matched = rCapture.exec( input );
 
 	if ( !matched ) {
